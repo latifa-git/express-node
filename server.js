@@ -1,7 +1,6 @@
 const express = require('express');
 const fs = require('fs');
 const TimeVerification = require('./middleware');
-const TimeVerification = require('./middleware');
 const app = express();
 
 app.get(('/'), TimeVerification, (req, res) => {
@@ -21,7 +20,7 @@ app.get(('/services'), TimeVerification, (req, res) => {
 
 })
 app.get(('/Contact'), TimeVerification, (req, res) => {
-    fs.readFile('./Contact/contact.html', 'utf-8', (err, data) =>
+    fs.readFile('./contact/contact.html', 'utf-8', (err, data) =>
     {
         err? console.log(err):res.send(data)
     })
